@@ -18,16 +18,15 @@ const promesa = new Promise(function(resolve, reject) {
 		resolve(pdf.save('edu.pdf'));
 	} 
   	else {
-  		alert('Please type something to create your PDF');
-    	reject("There was an error trying to create your PDF.");
+		alert('Please type something to create your PDF');
+		reject("There was an error trying to create your PDF.");
   }
 });
 
 	promesa.then(function(result) {
-			console.log("PDF created");
-		}, 
-		function(err) {
-			console.log(err); 
+		console.log("PDF created");
+	}, 
+	function(err) {
+		console.log(err); 
 	})
-
 };
